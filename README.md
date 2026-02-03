@@ -175,6 +175,20 @@ credit-card-tracker/
 └── README.md
 ```
 
+## Deploying to Vercel
+
+1. **Push your code** to GitHub (ensure `firebaseKey.json` stays in `.gitignore`).
+
+2. **Import the project** in [Vercel](https://vercel.com) → New Project → Import from GitHub.
+
+3. **Add environment variables** in Vercel → Project Settings → Environment Variables:
+   - All `NEXT_PUBLIC_*` vars from `.env.local`
+   - **`FIREBASE_SERVICE_ACCOUNT`**: Copy the entire contents of `firebaseKey.json`, minify to a single line (no newlines), and paste. Example format: `{"type":"service_account","project_id":"my-project",...}`
+
+4. **Deploy** — Vercel will build and deploy automatically.
+
+> **Note:** The MCP server runs locally only; it is not deployed to Vercel.
+
 ## Future Enhancements
 
 - [ ] Add user authentication
