@@ -319,7 +319,7 @@ export default function CardDetailPage() {
           {/* Benefits List */}
           {card.benefits.length === 0 ? (
             <div className="text-center py-8 text-gray-600">
-              <p>No benefits added yet. Click "Add Benefit" to get started.</p>
+              <p>No benefits added yet. Click &quot;Add Benefit&quot; to get started.</p>
             </div>
           ) : (
             <div className="space-y-4">

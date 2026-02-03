@@ -1,6 +1,6 @@
 import { NextRequest, NextResponse } from 'next/server';
 import { adminDb, isFirebaseAdminInitialized } from '@/lib/firebase-admin';
-import { Benefit } from '@/lib/types';
+import { Benefit, BenefitUsage } from '@/lib/types';
 
 const CARDS_COLLECTION = 'creditCards';
 
@@ -46,7 +46,7 @@ export async function POST(
 
     const usageHistory = benefit.usageHistory ?? [];
     const existingUsageIndex = usageHistory.findIndex(
-      (u) => u.period === period
+      (u: BenefitUsage) => u.period === period
     );
     const updatedUsageHistory = [...usageHistory];
 

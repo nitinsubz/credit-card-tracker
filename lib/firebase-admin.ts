@@ -15,13 +15,18 @@ function getServiceAccount() {
       return null;
     }
   }
-  // Local dev: use firebaseKey.json
+  // Local dev: use firebaseKey.json (dynamic path so bundler doesn't resolve at build time)
   try {
-    // eslint-disable-next-line @typescript-eslint/no-require-imports
-    return require('../firebaseKey.json');
+    const path = require('path');
+    const fs = require('fs');
+    const keyPath = path.join(process.cwd(), 'firebaseKey.json');
+    if (fs.existsSync(keyPath)) {
+      return JSON.parse(fs.readFileSync(keyPath, 'utf8'));
+    }
   } catch {
-    return null;
+    // Ignore
   }
+  return null;
 }
 
 function initializeFirebaseAdmin() {

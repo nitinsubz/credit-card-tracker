@@ -26,7 +26,14 @@ Returns credit card benefits that are **unused** for the current period.
 | `quarter`| Monthly + quarterly benefits                           |
 | `year`   | All benefits (monthly, quarterly, semi-annually, yearly) |
 
-## Adding to Cursor
+## Poke / Remote clients (HTTP)
+
+If you deploy the main app to Vercel, the MCP server is exposed at `/api/mcp`. In Poke or similar tools, use:
+
+- **Server URL:** `https://your-app.vercel.app/api/mcp`
+- **API Key:** Leave empty (unless you add auth)
+
+## Adding to Cursor (local)
 
 1. Open **Cursor Settings** (Cmd+, on macOS or Ctrl+, on Windows)
 2. Go to **Features** → **MCP** (or **Tools & Integrations** → **MCP Servers**)

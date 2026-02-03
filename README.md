@@ -149,9 +149,21 @@ Note: The current implementation doesn't include authentication. For production 
 
 ## MCP Server (AI Assistant Integration)
 
-An MCP server is included so you can query your credit card benefits from Cursor or other MCP-compatible AI assistants. Ask things like "What credits do I need to use this month?" and the AI will fetch your unused benefits.
+An MCP server is included so you can query your credit card benefits from Cursor, Poke, or other MCP-compatible AI assistants. Ask things like "What credits do I need to use this month?" and the AI will fetch your unused benefits.
 
-See [mcp-server/README.md](mcp-server/README.md) for setup instructions.
+### Poke / Remote clients (HTTP)
+
+Once deployed to Vercel, use this **Server URL** in Poke or similar tools:
+
+```
+https://your-app.vercel.app/api/mcp
+```
+
+Replace `your-app` with your actual Vercel project URL. Leave **API Key** empty unless you add authentication.
+
+### Cursor (local stdio)
+
+See [mcp-server/README.md](mcp-server/README.md) for Cursor setup (local process).
 
 ## Project Structure
 
