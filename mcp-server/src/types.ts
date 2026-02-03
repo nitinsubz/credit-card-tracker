@@ -29,6 +29,8 @@ export interface CreditCard {
 }
 
 export interface CreditToUse {
+  cardId: string;
+  benefitId: string;
   cardName: string;
   bank: string;
   benefitName: string;
