@@ -1,0 +1,9 @@
+{
+  "mcpServers": {
+    "credit-card-tracker": {
+      "command": "node",
+      "args": ["/ABSOLUTE/PATH/TO/credit-card-tracker/mcp-server/dist/index.js"],
+      "cwd": "/ABSOLUTE/PATH/TO/credit-card-tracker"
+    }
+  }
+}

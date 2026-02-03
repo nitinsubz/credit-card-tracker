@@ -147,6 +147,12 @@ Note: The current implementation doesn't include authentication. For production 
    - Potential value lost
    - Usage statistics per card
 
+## MCP Server (AI Assistant Integration)
+
+An MCP server is included so you can query your credit card benefits from Cursor or other MCP-compatible AI assistants. Ask things like "What credits do I need to use this month?" and the AI will fetch your unused benefits.
+
+See [mcp-server/README.md](mcp-server/README.md) for setup instructions.
+
 ## Project Structure
 
 ```
@@ -164,6 +170,7 @@ credit-card-tracker/
 │   ├── firestore.ts       # Firestore operations
 │   ├── types.ts           # TypeScript types
 │   └── utils.ts           # Utility functions
+├── mcp-server/            # MCP server for AI assistants
 ├── package.json
 └── README.md
 ```
